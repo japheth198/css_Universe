@@ -1,8 +1,8 @@
 :root {
     --dark-color: rgba(151, 81, 69, 0.801);
     --medium-color: rgba(126, 61, 61, 0.589);
-    --light-color: rgba(87, 32, 32, 0.383);
-    --text-color: rgb(87, 32, 32,);
+    --light-color: rgba(121, 41, 41, 0.438);
+    --text-color: rgb(114, 45, 45);
 }
 
 * {
@@ -107,19 +107,105 @@ body {
     animation-delay: 3s;
     transition-property: transform;
     transition-duration: 3s;
+
 }
 .btn-container {
     text-align: center;
     
 }
 
-@keyframes btn{
+@keyframes btn {
     0%{opacity: 0;}
     100%{opacity: 1;}
     
 }
-
-
-.btn:hover{
+ˇ
+.btn:hover {
     transform: rotateY(180deg);
+}
+
+.about {
+    background-color: rgb(101, 214, 214);
+    padding: 25rem 0;
+    margin-top: -25vh;
+}
+
+.u-center-text {
+    text-align: center;
+}
+
+.u-margin-buttom-big {
+    margin-bottom: 8rem;
+}
+
+.u-margin-button-small {
+    margin-bottom: 1.5rem;
+}
+
+.heading-secondary {
+    font-size: 3.5rem;
+    display: inline-block;
+    text-transform: uppercase;
+    color: transparent;
+    background-image: linear-gradient(to right, var(--medium-color), var(--dark-color));
+    background-clip: text;
+    letter-spacing: 0.2rem;
+}
+
+.heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.row {
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col-1-of-2 {
+    float: left;
+    width: 50%;
+    padding: 1rem;
+}
+
+.heading-tertiary {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: 1.6rem;
+}
+
+.paragraph:not(:last-child) {
+    margin-bottom: 3rem;
+}
+
+.btn-text:link, .btn-text:visited { 
+    font-size: 1.6rem;
+    color: var(--dark-color);
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 0.1rem solid var(--dark-color);
+    padding: 0.5rem;
+    transition: all 0.2s;
+}
+
+.btn-text:hover {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    box-shadow:0.1rem 2rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+.btn-text:active {
+    box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transform: translateY(0);
+
 }
