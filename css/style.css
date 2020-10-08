@@ -2,7 +2,7 @@
     --dark-color: rgba(151, 81, 69, 0.801);
     --medium-color: rgba(126, 61, 61, 0.589);
     --light-color: rgba(121, 41, 41, 0.438);
-    --text-color: rgb(114, 45, 45);
+    --text-color: rgb(109, 67, 34);
 }
 
 * {
@@ -78,8 +78,7 @@ body {
     animation-timing-function: ease-out;
 }
 
-@keyframes moveInRight {
-    
+@keyframes moveInRight {  
     0% {
         opacity: 0;
         transform: translateX(100px);
@@ -107,7 +106,6 @@ body {
     animation-delay: 3s;
     transition-property: transform;
     transition-duration: 3s;
-
 }
 .btn-container {
     text-align: center;
@@ -208,4 +206,44 @@ body {
     box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     transform: translateY(0);
 
+}
+
+.composition {
+    position: relative;
+}
+
+.composition_photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    outline-offset: 2rem;
+    transition: all 0.2s;
+    z-index: 10;
+    
+}
+
+.composition_photo--p1 {
+    left: 0;
+    top: -2rem;
+}
+
+.composition_photo--p2 {
+    right: 0;
+    top: 2rem;
+}
+
+.composition_photo--p3 {
+    left: 20%;
+    top: 10rem;
+}
+
+.composition_photo:hover {
+    outline: 1.5rem solid var(--medium-color);
+    transform: scale(1.05);
+    z-index: 20;
+}
+
+.composition:hover .composition_photo:not(:hover) {
+    transform: scale(0.5)
 }
