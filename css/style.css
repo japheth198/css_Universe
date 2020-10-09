@@ -1,8 +1,8 @@
 :root {
-    --dark-color: rgba(151, 81, 69, 0.801);
+    --dark-color: rgba(95, 47, 39, 0.801);
     --medium-color: rgba(126, 61, 61, 0.589);
-    --light-color: rgba(121, 41, 41, 0.438);
-    --text-color: rgb(109, 67, 34);
+    --light-color: rgb(121, 92, 29);
+    --text-color: rgb(100, 59, 27);
 }
 
 * {
@@ -160,7 +160,7 @@ body {
     margin: 0 auto;
 }
 
-.row::after {
+.row:after {
     content: "";
     display: table;
     clear: both;
@@ -246,4 +246,47 @@ body {
 
 .composition:hover .composition_photo:not(:hover) {
     transform: scale(0.5)
+}
+
+.col-1-of-4 {
+    float: left;
+    width: 25%;
+    padding: 2rem;
+}
+
+.features {
+    padding: 8rem 0;
+    height: 85vh;
+    background-image: linear-gradient(to right bottom, var(--light-color),
+    var(--dark-color)), url('../img/landscape.jpg');
+    background-size: cover;
+    background-position: bottom;
+    transform: skewY(-7deg);
+    margin-top: -7rem;
+}
+
+.features > * {
+    transform: skewY(7deg);
+}
+
+.feature-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 2rem;
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--dark-color);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+
+}
+
+.feature-box i {
+    font-size: 4rem;
+    background-image: linear-gradient(to right, var(--light-color), var(--dark-color));
+    background-clip: text;
+    color: transparent;
+}
+
+.feature-box:hover {
+    transform: translateY(-1.5rem) scale(1.03);
 }
